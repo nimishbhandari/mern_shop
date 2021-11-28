@@ -11,3 +11,7 @@ main {
 header {
   margin: 10px;
 }
+
+.rating span{
+  margin:0.1rem;
+}
