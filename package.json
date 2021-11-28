@@ -1,0 +1,24 @@
+{
+  "name": "mern_shop",
+  "version": "1.0.0",
+  "description": "ecomm template",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nimishbhandari/mern_shop.git"
+  },
+  "author": "Nimish Bhandari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nimishbhandari/mern_shop/issues"
+  },
+  "homepage": "https://github.com/nimishbhandari/mern_shop#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  }
+}
