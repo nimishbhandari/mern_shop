@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import "./bootstrap.min.css";
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
+import CartScreen from "./screens/CartScreen";
 
 const App = () => {
   return (
@@ -14,8 +15,10 @@ const App = () => {
       <main>
         <Container>
           <Routes>
-            <Route path="/" exact element={<HomeScreen />} />
-            <Route path={"/product/:id"} exact element={<ProductScreen />} />
+            <Route path="/" element={<HomeScreen />} />
+            <Route path={"/product/:id"} element={<ProductScreen />} />
+            <Route path={"/cart/:id"} element={<CartScreen />} />
+            <Route path={"/cart/"} element={<CartScreen />} />
           </Routes>
         </Container>
       </main>
