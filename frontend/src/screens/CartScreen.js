@@ -9,8 +9,9 @@ const CartScreen = () => {
   const productId = useParams().id;
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const qty = Number(useLocation().search.split("=")[1]);
+  const qty = Number(location.search.split("=")[1]);
 
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
