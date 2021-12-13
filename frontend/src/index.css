@@ -12,6 +12,10 @@ header {
   margin: 10px;
 }
 
-.rating span{
-  margin:0.1rem;
+.rating span {
+  margin: 0.1rem;
+}
+
+h1 {
+  padding: 1rem;
 }

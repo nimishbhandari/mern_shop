@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Rating from "../components/Rating";
 import { Row, Col, Image, ListGroup, Button, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -27,9 +27,9 @@ const ProductScreen = () => {
 
   return (
     <div>
-      <Link className="btn btn-dark my-3" to="/">
+      <Button className="btn btn-dark my-3" onClick={() => navigate(-1)}>
         Go Back
-      </Link>
+      </Button>
 
       {loading ? (
         <Loader />
