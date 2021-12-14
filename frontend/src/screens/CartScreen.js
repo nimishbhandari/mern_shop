@@ -15,14 +15,13 @@ const CartScreen = () => {
 
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
-  console.log(cartItems);
 
   const removeFromCartHandler = (id) => {
     dispatch(removeFromCart(id));
   };
 
   const checkoutHandler = () => {
-    navigate(`/login?redirect=shipping`);
+    navigate("/login?redirect=shipping");
   };
 
   useEffect(() => {
