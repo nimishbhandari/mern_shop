@@ -18,7 +18,6 @@ const addOrderItems = asyncHandler(async (req, res) => {
   if (orderItems && orderItems.length === 0) {
     res.status(400);
     throw new Error("No order Items");
-    return;
   } else {
     const order = new Order({
       orderItems,
@@ -33,7 +32,7 @@ const addOrderItems = asyncHandler(async (req, res) => {
 
     const createOrder = await order.save();
 
-    res.send(201).json(createOrder);
+    res.status(201).json(createOrder);
   }
 });
 
