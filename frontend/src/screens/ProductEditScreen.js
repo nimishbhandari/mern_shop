@@ -95,7 +95,7 @@ const ProductEditScreen = () => {
 
   return (
     <div>
-      <Link to="/admin/productlist" className="btn btn-light my-3">
+      <Link to="/admin/productlist" className="btn btn-dark my-3">
         Go Back
       </Link>
       <FormContainer>
@@ -108,7 +108,7 @@ const ProductEditScreen = () => {
           <Message variant="danger">{error}</Message>
         ) : (
           <Form onSubmit={submitHandler}>
-            <Form.Group controlId="name">
+            <Form.Group>
               <Form.Label>Name</Form.Label>
               <Form.Control
                 type="name"
@@ -118,7 +118,7 @@ const ProductEditScreen = () => {
               ></Form.Control>
             </Form.Group>
             <br />
-            <Form.Group controlId="price">
+            <Form.Group>
               <Form.Label>Price</Form.Label>
               <Form.Control
                 type="number"
@@ -128,7 +128,8 @@ const ProductEditScreen = () => {
               ></Form.Control>
             </Form.Group>
             <br />
-            {/* <Form.Group controlId="image">
+
+            <Form.Group controlId="image">
               <Form.Label>Image</Form.Label>
               <Form.Control
                 type="text"
@@ -138,14 +139,13 @@ const ProductEditScreen = () => {
               ></Form.Control>
               <Form.File
                 id="image-file"
-                label="Choose File"
                 custom
                 onChange={uploadFileHandler}
               ></Form.File>
               {uploading && <Loader />}
-            </Form.Group> */}
-
-            <Form.Group controlId="brand">
+            </Form.Group>
+            <br />
+            <Form.Group>
               <Form.Label>Brand</Form.Label>
               <Form.Control
                 type="text"
@@ -155,7 +155,7 @@ const ProductEditScreen = () => {
               ></Form.Control>
             </Form.Group>
             <br />
-            <Form.Group controlId="countInStock">
+            <Form.Group>
               <Form.Label>Count In Stock</Form.Label>
               <Form.Control
                 type="number"
@@ -165,7 +165,7 @@ const ProductEditScreen = () => {
               ></Form.Control>
             </Form.Group>
             <br />
-            <Form.Group controlId="category">
+            <Form.Group>
               <Form.Label>Category</Form.Label>
               <Form.Control
                 type="text"
@@ -175,7 +175,7 @@ const ProductEditScreen = () => {
               ></Form.Control>
             </Form.Group>
             <br />
-            <Form.Group controlId="description">
+            <Form.Group>
               <Form.Label>Description</Form.Label>
               <Form.Control
                 type="text"
