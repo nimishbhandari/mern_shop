@@ -4,7 +4,11 @@ import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { deliverOrder, getOrderDetails } from "../actions/orderAction";
+import {
+  deliverOrder,
+  getOrderDetails,
+  payOrder,
+} from "../actions/orderAction";
 import {
   ORDER_DELIVER_RESET,
   ORDER_PAY_RESET,
@@ -43,15 +47,27 @@ const OrderScreen = () => {
       dispatch({ type: ORDER_DELIVER_RESET });
       dispatch(getOrderDetails(orderId));
     } else if (!order.isPaid) {
-      console.log("not Paid");
+      console.log("");
     }
-  }, [dispatch, orderId, successPay, successDeliver, order]);
+  }, [
+    dispatch,
+    navigate,
+    userInfo,
+    orderId,
+    successPay,
+    successDeliver,
+    order,
+  ]);
 
   const deliverHandler = () => {
     dispatch(deliverOrder(order));
   };
 
-  return loading ? (
+  const payHandler = () => {
+    dispatch(payOrder(orderId));
+  };
+
+  return loading || loadingPay ? (
     <Loader />
   ) : error ? (
     <Message variant="danger">{error}</Message>
@@ -87,9 +103,7 @@ const OrderScreen = () => {
                 <div>
                   <p>
                     {order.isDelivered ? (
-                      <Message variant="success">
-                        Delivered on {order.deliveredAt}
-                      </Message>
+                      <Message variant="success">Delivered</Message>
                     ) : (
                       <Message variant="danger">Not Delivered</Message>
                     )}
@@ -107,9 +121,7 @@ const OrderScreen = () => {
                 <div>
                   <p>
                     {order.isPaid ? (
-                      <Message variant="success">
-                        Paid on {order.paidAt}
-                      </Message>
+                      <Message variant="success">Paid</Message>
                     ) : (
                       <Message variant="danger">Not Paid</Message>
                     )}
@@ -188,7 +200,7 @@ const OrderScreen = () => {
                   className="btn"
                   variant="success"
                   style={{ display: "block", width: "100%" }}
-                  onClick={deliverHandler}
+                  onClick={payHandler}
                 >
                   Pay
                 </Button>
