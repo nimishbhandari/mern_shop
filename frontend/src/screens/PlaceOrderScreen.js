@@ -92,7 +92,8 @@ const PlaceOrderScreen = () => {
                           </Link>
                         </Col>
                         <Col md={4}>
-                          {item.qty} X {item.price} = $ {item.qty * item.price}
+                          {item.qty} X {item.price} = &#8377;{" "}
+                          {item.qty * item.price}
                         </Col>
                       </Row>
                     </ListGroup.Item>
@@ -110,19 +111,19 @@ const PlaceOrderScreen = () => {
             <ListGroup.Item>
               <Row>
                 <Col>Items</Col>
-                <Col>$ {cart.itemsPrice}</Col>
+                <Col>&#8377; {cart.itemsPrice}</Col>
               </Row>
             </ListGroup.Item>
             <ListGroup.Item>
               <Row>
                 <Col>Shipping</Col>
-                <Col>$ {cart.shippingPrice}</Col>
+                <Col>&#8377;{cart.shippingPrice}</Col>
               </Row>
             </ListGroup.Item>
             <ListGroup.Item>
               <Row>
                 <Col>Tax Price</Col>
-                <Col>$ {cart.taxPrice}</Col>
+                <Col>&#8377; {cart.taxPrice}</Col>
               </Row>
             </ListGroup.Item>
             <ListGroup.Item>

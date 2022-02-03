@@ -153,7 +153,8 @@ const OrderScreen = () => {
                           </Link>
                         </Col>
                         <Col md={4}>
-                          {item.qty} X {item.price} = $ {item.qty * item.price}
+                          {item.qty} X {item.price} = &#8377;{" "}
+                          {item.qty * item.price}
                         </Col>
                       </Row>
                     </ListGroup.Item>
@@ -171,19 +172,19 @@ const OrderScreen = () => {
             <ListGroup.Item>
               <Row>
                 <Col>Items</Col>
-                <Col>$ {order.itemsPrice}</Col>
+                <Col>&#8377;{order.itemsPrice}</Col>
               </Row>
             </ListGroup.Item>
             <ListGroup.Item>
               <Row>
                 <Col>Shipping</Col>
-                <Col>$ {order.shippingPrice}</Col>
+                <Col>&#8377;{order.shippingPrice}</Col>
               </Row>
             </ListGroup.Item>
             <ListGroup.Item>
               <Row>
                 <Col>Tax Price</Col>
-                <Col>$ {order.taxPrice}</Col>
+                <Col>&#8377; {order.taxPrice}</Col>
               </Row>
             </ListGroup.Item>
             <ListGroup.Item>

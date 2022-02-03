@@ -94,7 +94,7 @@ const ProductScreen = () => {
                   <h2>Price: ${product.price}</h2>
                 </ListGroup.Item>
 
-                <ListGroup.Item>
+                <ListGroup.Item style={{ padding: "20px" }}>
                   <h4>Description:</h4>
                   {product.description}
                 </ListGroup.Item>
@@ -107,7 +107,7 @@ const ProductScreen = () => {
                   <Row>
                     <Col>Price:</Col>
                     <Col>
-                      <strong>${product.price}</strong>
+                      <strong>&#8377;{product.price}</strong>
                     </Col>
                   </Row>
                 </ListGroup.Item>
@@ -170,7 +170,7 @@ const ProductScreen = () => {
                     <p>{review.comment}</p>
                   </ListGroup.Item>
                 ))}
-                <ListGroup.Item>
+                <ListGroup.Item style={{ padding: "20px" }}>
                   <h2>Write a Customer Review</h2>
                   {successProductReview && (
                     <Message variant="success">
