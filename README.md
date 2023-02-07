@@ -1,6 +1,6 @@
 # Devmeet
 
-https://prop-shop.herokuapp.com/
+https://prop-shop.onrender.com/
 
 > This is a singler seller e-commerce platform where people can sell their products and increase their online presence, a MERN stack application that includes authentication, profiles and reviews, buy, sell, last orders and admin panel.
 
